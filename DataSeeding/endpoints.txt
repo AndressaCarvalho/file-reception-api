@@ -349,7 +349,7 @@ Accept: */*
 Content-Type: multipart/form-data
 
 REQUEST BODY
-file: IFormFile (Arquivo físico DataSeeding\Files\UfCard_Teste_1.txt)
+file: IFormFile (Arquivo físico DataSeeding\TestFiles\UfCard_Teste_1.txt)
 RESPONSE
 {
 	"id": 1,
