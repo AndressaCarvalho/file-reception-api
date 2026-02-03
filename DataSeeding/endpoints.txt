@@ -1,0 +1,362 @@
+==================== Company ====================
+
+POST https://localhost:7006/api/Company
+
+HEADERS
+Accept: */*
+Content-Type: application/json
+
+REQUEST BODY
+{
+	"name": "FagammonCard"
+}
+RESPONSE
+{
+	"id": 1,
+	"name": "FagammonCard"
+}
+
+REQUEST BODY
+{
+	"name": "UfCard"
+}
+RESPONSE
+{
+	"id": 2,
+	"name": "UfCard"
+}
+
+
+==================== FileLayout ====================
+
+POST https://localhost:7006/api/FileLayout
+
+HEADERS
+Accept: */*
+Content-Type: application/json
+
+REQUEST BODY
+{
+	"name": "FagammonCard Layout 1",
+	"companyId": 1
+}
+RESPONSE
+{
+	"id": 1,
+	"fileLayoutName": "FagammonCard Layout 1",
+	"companyId": 1,
+	"companyName": "FagammonCard"
+}
+
+REQUEST BODY
+{
+	"name": "UfCard Layout 1",
+	"companyId": 2
+}
+RESPONSE
+{
+	"id": 2,
+	"fileLayoutName": "UfCard Layout 1",
+	"companyId": 2,
+	"companyName": "UfCard"
+}
+
+
+==================== FileLayoutField ====================
+
+POST https://localhost:7006/api/FileLayoutField
+
+HEADERS
+Accept: */*
+Content-Type: application/json
+
+REQUEST BODY
+{
+	"fileLayoutId": 1,
+	"description": "DataProcessamento",
+	"start": 2,
+	"end": 9,
+	"fileLayoutFieldTypeId": 2
+}
+RESPONSE
+{
+	"id": 2,
+	"fileLayoutId": 1,
+	"fileLayoutName": "FagammonCard Layout 1",
+	"description": "DataProcessamento",
+	"start": 2,
+	"end": 9,
+	"fileLayoutFieldTypeId": 2,
+	"fileLayoutFieldTypeName": "NUM"
+}
+
+REQUEST BODY
+{
+	"fileLayoutId": 1,
+	"description": "Estabelecimento",
+	"start": 10,
+	"end": 17,
+	"fileLayoutFieldTypeId": 2
+}
+RESPONSE
+{
+	"id": 3,
+	"fileLayoutId": 1,
+	"fileLayoutName": "FagammonCard Layout 1",
+	"description": "Estabelecimento",
+	"start": 10,
+	"end": 17,
+	"fileLayoutFieldTypeId": 2,
+	"fileLayoutFieldTypeName": "NUM"
+}
+
+REQUEST BODY
+{
+	"fileLayoutId": 1,
+	"description": "Empresa",
+	"start": 18,
+	"end": 29,
+	"fileLayoutFieldTypeId": 1
+}
+RESPONSE
+{
+	"id": 4,
+	"fileLayoutId": 1,
+	"fileLayoutName": "FagammonCard Layout 1",
+	"description": "Empresa",
+	"start": 18,
+	"end": 29,
+	"fileLayoutFieldTypeId": 1,
+	"fileLayoutFieldTypeName": "ALFA"
+}
+
+REQUEST BODY
+{
+	"fileLayoutId": 1,
+	"description": "Sequencia",
+	"start": 30,
+	"end": 36,
+	"fileLayoutFieldTypeId": 2
+}
+RESPONSE
+{
+	"id": 5,
+	"fileLayoutId": 1,
+	"fileLayoutName": "FagammonCard Layout 1",
+	"description": "Sequencia",
+	"start": 30,
+	"end": 36,
+	"fileLayoutFieldTypeId": 2,
+	"fileLayoutFieldTypeName": "NUM"
+}
+
+REQUEST BODY
+{
+	"fileLayoutId": 2,
+	"description": "TipoRegistro",
+	"start": 1,
+	"end": 1,
+	"fileLayoutFieldTypeId": 2
+}
+RESPONSE
+{
+	"id": 6,
+	"fileLayoutId": 2,
+	"fileLayoutName": "UfCard Layout 1",
+	"description": "TipoRegistro",
+	"start": 1,
+	"end": 1,
+	"fileLayoutFieldTypeId": 2,
+	"fileLayoutFieldTypeName": "NUM"
+}
+
+REQUEST BODY
+{
+	"fileLayoutId": 2,
+	"description": "Estabelecimento",
+	"start": 2,
+	"end": 11,
+	"fileLayoutFieldTypeId": 2
+}
+RESPONSE
+{
+	"id": 7,
+	"fileLayoutId": 2,
+	"fileLayoutName": "UfCard Layout 1",
+	"description": "Estabelecimento",
+	"start": 2,
+	"end": 11,
+	"fileLayoutFieldTypeId": 2,
+	"fileLayoutFieldTypeName": "NUM"
+}
+
+REQUEST BODY
+{
+	"fileLayoutId": 2,
+	"description": "DataProcessamento",
+	"start": 12,
+	"end": 19,
+	"fileLayoutFieldTypeId": 2
+}
+RESPONSE
+{
+	"id": 8,
+	"fileLayoutId": 2,
+	"fileLayoutName": "UfCard Layout 1",
+	"description": "DataProcessamento",
+	"start": 12,
+	"end": 19,
+	"fileLayoutFieldTypeId": 2,
+	"fileLayoutFieldTypeName": "NUM"
+}
+
+REQUEST BODY
+{
+	"fileLayoutId": 2,
+	"description": "PeriodoInicial",
+	"start": 20,
+	"end": 27,
+	"fileLayoutFieldTypeId": 2
+}
+RESPONSE
+{
+	"id": 9,
+	"fileLayoutId": 2,
+	"fileLayoutName": "UfCard Layout 1",
+	"description": "PeriodoInicial",
+	"start": 20,
+	"end": 27,
+	"fileLayoutFieldTypeId": 2,
+	"fileLayoutFieldTypeName": "NUM"
+}
+
+REQUEST BODY
+{
+	"fileLayoutId": 2,
+	"description": "PeriodoFinal",
+	"start": 28,
+	"end": 35,
+	"fileLayoutFieldTypeId": 2
+}
+RESPONSE
+{
+	"id": 10,
+	"fileLayoutId": 2,
+	"fileLayoutName": "UfCard Layout 1",
+	"description": "PeriodoFinal",
+	"start": 28,
+	"end": 35,
+	"fileLayoutFieldTypeId": 2,
+	"fileLayoutFieldTypeName": "NUM"
+}
+
+REQUEST BODY
+{
+	"fileLayoutId": 2,
+	"description": "Sequencia",
+	"start": 36,
+	"end": 42,
+	"fileLayoutFieldTypeId": 2
+}
+RESPONSE
+{
+	"id": 11,
+	"fileLayoutId": 2,
+	"fileLayoutName": "UfCard Layout 1",
+	"description": "Sequencia",
+	"start": 36,
+	"end": 42,
+	"fileLayoutFieldTypeId": 2,
+	"fileLayoutFieldTypeName": "NUM"
+}
+
+REQUEST BODY
+{
+	"fileLayoutId": 2,
+	"description": "Empresa",
+	"start": 43,
+	"end": 50,
+	"fileLayoutFieldTypeId": 1
+}
+RESPONSE
+{
+	"id": 12,
+	"fileLayoutId": 2,
+	"fileLayoutName": "UfCard Layout 1",
+	"description": "Empresa",
+	"start": 43,
+	"end": 50,
+	"fileLayoutFieldTypeId": 1,
+	"fileLayoutFieldTypeName": "ALFA"
+}
+
+
+==================== File ====================
+
+POST https://localhost:7006/api/File
+
+HEADERS
+Accept: */*
+Content-Type: application/json
+
+REQUEST BODY
+{
+	"fileLayoutId": 1,
+	"fileName": "FagammonCard_Teste_1.txt",
+	"expectedDate": "2026-02-04T10:00:00.000Z",
+	"statusId": 1
+}
+RESPONSE
+{
+	"id": 1,
+	"fileLayoutId": 1,
+	"fileLayoutName": "FagammonCard Layout 1",
+	"companyId": 1,
+	"companyName": "FagammonCard",
+	"fileName": "FagammonCard_Teste_1.txt",
+	"expectedDate": "2026-02-04T10:00:00Z",
+	"statusId": 1,
+	"statusName": "Não Recepcionado"
+}
+
+REQUEST BODY
+{
+	"fileLayoutId": 2,
+	"fileName": "UfCard_Teste_1.txt",
+	"expectedDate": "2026-02-04T10:00:00.000Z",
+	"statusId": 1
+}
+RESPONSE
+{
+	"id": 2,
+	"fileLayoutId": 2,
+	"fileLayoutName": "UfCard Layout 1",
+	"companyId": 2,
+	"companyName": "UfCard",
+	"fileName": "UfCard_Teste_1.txt",
+	"expectedDate": "2026-02-04T10:00:00Z",
+	"statusId": 1,
+	"statusName": "Não Recepcionado"
+}
+
+
+==================== FileProcess ====================
+
+POST https://localhost:7006/api/FileProcess/upload
+
+HEADERS
+Accept: */*
+Content-Type: multipart/form-data
+
+REQUEST BODY
+file: IFormFile (Arquivo físico DataSeeding\Files\UfCard_Teste_1.txt)
+RESPONSE
+{
+	"id": 1,
+	"fileId": 2,
+	"fileName": "UfCard_Teste_1.txt",
+	"filePathBackup": "/backups/UfCard_Teste_1.txt",
+	"receivedAt": "2026-02-03T20:20:39.530803+00:00",
+	"isValid": true,
+	"errorMessage": null
+}

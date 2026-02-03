@@ -1,0 +1,32 @@
+services:
+  api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=https://+:8443;http://+:8080
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/host.docker.internal+1.pem
+      - ASPNETCORE_Kestrel__Certificates__Default__KeyPath=/https/host.docker.internal+1-key.pem
+    build:
+      context: .
+      dockerfile: src/FileReception.Api/Dockerfile
+    ports:
+      - "7006:8443"
+      - "7007:8080"
+    volumes:
+      - C:\Certificates\file-reception-api:/https:ro
+      - C:\www\file-reception-api\FileBackups:/backups
+    depends_on:
+      - redis
+      - sqlserver
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      SA_PASSWORD: "Passw0rd!"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
