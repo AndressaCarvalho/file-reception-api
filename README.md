@@ -84,7 +84,7 @@ dotnet run
 > ⚠️ Sem o Docker, será necessário executar um container do Redis na porta 6379, executando o comando `docker run -d --name redis -p 6379:6379 redis` antes de rodar a aplicação.
 
 ### 2️⃣ Executando via Docker
-1. Certifique-se de ter [Docker](https://docs.docker.com/engine/install/) instalado.
+1. Certifique-se de ter [Docker](https://docs.docker.com/engine/install/) instalado e em execução.
 2. Execute o comando:
 ```bash
 docker-compose up --build -d
@@ -452,13 +452,13 @@ Representação das tabelas e seus relacionamentos no banco de dados:
 
 ## Tecnologias
 As seguintes ferramentas foram utilizadas na construção do projeto:
+- Git
+- Visual Studio ou Visual Studio Code
 - ASP.NET Core 8
 - Entity Framework Core
 - SQL Server
 - Redis (cache)
 - Docker (opcional)
-- Visual Studio ou Visual Studio Code
-- Git
 
 ---
 
@@ -474,4 +474,5 @@ Feito com ❤️ por Andressa Carvalho 👋🏽 Entre em contato!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Andressa-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andressa-carvalho-araujo-289931199/)](https://www.linkedin.com/in/andressa-carvalho-araujo-289931199/) 
 [![Gmail Badge](https://img.shields.io/badge/-andressac.dev@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:andressac.dev@gmail.com)](mailto:andressac.dev@gmail.com)
+
 
