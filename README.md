@@ -108,7 +108,7 @@ Contém querys que podem ser usadas para inserir registros diretamente no banco 
 Se preferir, os dados podem ser cadastrados através de requisições POST à API, descritas no arquivo.
 
 ### /TestFiles
-Apresenta arquivos que podem ser usados para o upload.
+Apresenta arquivos que podem ser usados para o upload, através do endpoint /api/FileProcess/upload.
 
 > ⚠️ As tabelas FileStatus e FileLayoutFieldType já são populadas por meio da Migration.
 
@@ -493,6 +493,7 @@ Feito com ❤️ por Andressa Carvalho 👋🏽 Entre em contato!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Andressa-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andressa-carvalho-araujo-289931199/)](https://www.linkedin.com/in/andressa-carvalho-araujo-289931199/) 
 [![Gmail Badge](https://img.shields.io/badge/-andressac.dev@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:andressac.dev@gmail.com)](mailto:andressac.dev@gmail.com)
+
 
 
 
