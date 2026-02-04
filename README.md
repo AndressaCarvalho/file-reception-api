@@ -36,6 +36,7 @@ A aplicação verifica os arquivos cadastrados na tabela File com status "Não R
   <li><a href="#recursos">Recursos</a></li>
   <li><a href="#pré-requisitos">Pré-requisitos</a></li>
   <li><a href="#execução">Execução</a></li>
+  <li><a href="#testes">Testes</a></li>
   <li><a href="#rotas">Rotas</a></li>
   <li><a href="#diagrama-de-entidades">Diagrama de Entidades</a></li>
   <li><a href="#tecnologias">Tecnologias</a></li>
@@ -92,6 +93,17 @@ docker-compose up --build -d
 > ✅ O banco de dados SQL Server e o Redis já serão criados pelo Docker.
 
 > Para parar a execução e remover o container, execute `docker-compose down`.
+
+**A aplicação deve ser executada no endereço [https://localhost:7006](https://localhost:7006/).**
+
+---
+
+## Testes
+Para que a aplicação seja testada, é necessário a população do banco de dados SQL Server. Sendo assim, no diretório /DataSeeding existem:
+- scripts.sql: Contém querys que podem ser usadas para inserir registros diretamente no banco de dados.
+- endpoints.txt: Se preferir, os dados podem ser cadastrados através de requisições POST à API, descritas no arquivo.
+- /TestFiles: Apresenta arquivos que podem ser usados para o upload.
+> ⚠️ As tabelas FileStatus e FileLayoutFieldType já são populadas por meio da Migration.
 
 ---
 
@@ -474,5 +486,6 @@ Feito com ❤️ por Andressa Carvalho 👋🏽 Entre em contato!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Andressa-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andressa-carvalho-araujo-289931199/)](https://www.linkedin.com/in/andressa-carvalho-araujo-289931199/) 
 [![Gmail Badge](https://img.shields.io/badge/-andressac.dev@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:andressac.dev@gmail.com)](mailto:andressac.dev@gmail.com)
+
 
 
