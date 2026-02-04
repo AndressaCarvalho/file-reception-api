@@ -73,7 +73,7 @@ $ git clone https://github.com/AndressaCarvalho/file-reception-api.git
 ```json
 {
   "FileConfig": {
-    "BackupPath": "C:\\www\\exemplo"
+    "BackupPath": "C:\\backups\\exemplo"
   }
 }
 ```
@@ -93,6 +93,24 @@ docker-compose up --build -d
 > ✅ O banco de dados SQL Server e o Redis já serão criados pelo Docker.
 
 > Para parar a execução e remover o container, execute `docker-compose down`.
+
+Caso ocorra falhas relacionadas à falta de Certificado localhost, é possível criar um por meio dos comandos:
+```bash
+choco install mkcert
+mkcert -install
+mkcert host.docker.internal localhost
+```
+Após isso, é preciso alterar o caminho real mapeado no volume do Certificado no docker-compose.yml, apontando para o local onde está o Certificado. Exemplo:
+De
+```yml
+volumes:
+      - C:\Certificates\file-reception-api:/https:ro
+```
+para 
+```yml
+volumes:
+      - C:\Certificates\exemplo:/https:ro
+```
 
 **A aplicação deve ser executada no endereço [https://localhost:7006](https://localhost:7006/).**
 
@@ -493,6 +511,7 @@ Feito com ❤️ por Andressa Carvalho 👋🏽 Entre em contato!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Andressa-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andressa-carvalho-araujo-289931199/)](https://www.linkedin.com/in/andressa-carvalho-araujo-289931199/) 
 [![Gmail Badge](https://img.shields.io/badge/-andressac.dev@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:andressac.dev@gmail.com)](mailto:andressac.dev@gmail.com)
+
 
 
 
