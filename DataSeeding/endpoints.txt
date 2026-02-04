@@ -73,6 +73,26 @@ Content-Type: application/json
 REQUEST BODY
 {
 	"fileLayoutId": 1,
+	"description": "TipoRegistro",
+	"start": 1,
+	"end": 1,
+	"fileLayoutFieldTypeId": 2
+}
+RESPONSE
+{
+	"id": 1,
+	"fileLayoutId": 1,
+	"fileLayoutName": "FagammonCard Layout 1",
+	"description": "TipoRegistro",
+	"start": 1,
+	"end": 1,
+	"fileLayoutFieldTypeId": 2,
+	"fileLayoutFieldTypeName": "NUM"
+}
+
+REQUEST BODY
+{
+	"fileLayoutId": 1,
 	"description": "DataProcessamento",
 	"start": 2,
 	"end": 9,

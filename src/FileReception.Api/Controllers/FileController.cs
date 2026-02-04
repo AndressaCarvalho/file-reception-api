@@ -15,11 +15,13 @@ public class FileController : ControllerBase
 {
     private readonly IFileService _fileService;
     private readonly IDatabase _redisDb;
+    private readonly IConfiguration _configuration;
 
-    public FileController(IFileService fileService, IConnectionMultiplexer redis)
+    public FileController(IFileService fileService, IConnectionMultiplexer redis, IConfiguration configuration)
     {
         _fileService = fileService;
         _redisDb = redis.GetDatabase();
+        _configuration = configuration;
     }
 
     [HttpGet]
@@ -97,6 +99,9 @@ public class FileController : ControllerBase
     [TypeFilter(typeof(CacheFilter))]
     public async Task<IActionResult> GetCountByStatusLastDaysAsync([FromQuery] int lastDays)
     {
+        if (lastDays == 0)
+            lastDays = _configuration.GetValue<int>("FileConfig:Report:LastDays:FieldValue");
+
         var result = await _fileService.GetCountByStatusLastDaysAsync(lastDays);
         
         return Ok(result);
